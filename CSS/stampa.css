@@ -1,0 +1,236 @@
+/*GENERALE*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-size: 1.1rem;
+    color: black;
+    margin: 1.5rem;
+}
+
+a {
+    color: black;
+}
+
+a::after {
+    content: " (URL: " attr(href) ")";
+    font-size: 0.9em;
+    color: blue;
+}
+
+ul {
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+li {
+    margin-left: 1em;
+}
+
+#cancelletto {
+    color: orange;
+}
+
+.mexProm {
+    text-decoration: line-through;
+}
+
+#signature {
+    position: fixed;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    top: 0.1rem;
+    right: 0.1rem;
+    color: orange;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "page_header" "main" "footer";
+    font-family: 'Roboto Slab', "Times New Roman", serif;
+}
+
+/*HEADER*/
+
+.header {
+    grid-area: header;
+    height: 2.4rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid;
+    margin-bottom: 0.7rem;
+}
+
+.header div {
+    display: inline-block;
+}
+
+#sito p {
+    font-weight: 700;
+    line-height: 2.4rem;
+    font-size: 2.1rem;
+}
+
+#user {
+    float: right;
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+}
+
+/*PAGE HEADER*/
+
+.page_header {
+    grid-area: page_header;
+    /*Titolo*/
+    text-align: left;
+}
+
+.page_header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+
+/*NAV*/
+
+.nav {
+    display: none;
+}
+
+.nav a {
+    display: none;
+}
+
+/*MENU*/
+
+.menu {
+    display: none;
+}
+
+/*MAIN*/
+
+.main {
+    margin: 1rem 0.2rem;
+    grid-area: main;
+    line-height: 1.4em;
+    overflow: auto;
+}
+
+.main section {
+    margin: 0 0.4rem;
+}
+
+.main h2 {
+    margin-bottom: 0.5rem;
+}
+
+.main p {
+    margin-top: 0.7rem;
+    font-weight: 500;
+    border-left: 0.2rem solid orange;
+    padding-left: 0.6rem;
+}
+
+.logout {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    background-color: inherit;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+    display: inline-block;
+}
+
+.plogout {
+    font: inherit;
+    color: inherit;
+    background-color: inherit;
+    display: inline-block;
+}
+
+.main table{
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+th, td {
+    overflow: hidden;
+}
+
+#logTable tr {
+    border-bottom: 0.005rem solid;
+}
+
+.main th {
+    border-right: 0.05rem solid;
+    border-left: 0.05rem solid;
+    padding: 0.2rem 1rem;
+}
+
+#beneficiariTable td:nth-child(2) {
+    text-align: center;
+    width: 5rem;
+}
+
+#logTable td {
+    text-align: left;
+    padding: 0 1rem;
+}
+
+#logTable td:first-child, #logTable td:nth-child(4) {
+    text-align: right;
+}
+
+#logTable td:nth-child(5) {
+    min-width: 195px;
+}
+
+/*FOOTER*/
+
+.footer {
+    grid-area: footer;
+    padding: 0.5rem 0;
+    border-top: 0.2rem solid;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    line-height: 1.5rem;
+    font-weight: bold;
+    word-spacing: -0.25em;
+    font-size: 0.95rem;
+}
+
+.footer > a {
+    position: relative;
+    top: -3rem;
+}
+
+.footer img {
+    display: inline-block;
+    margin-right: 0.5rem;
+    height: 3rem;
+}
+
+#io {
+    display: block;
+    position: relative;
+    top: 3.4rem;
+    height: 3rem;
+}
+
+#io abbr {
+    text-decoration: underline;
+}
+
+noscript {
+    display: none;
+}

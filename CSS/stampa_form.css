@@ -1,0 +1,89 @@
+
+.accessoContainer {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 22rem auto;
+    grid-template-areas: "form alert";
+}
+
+.accessoForm {
+    grid-area: form;
+    margin-bottom: 0.5rem;
+}
+
+.fieldLabel {
+    transition: border 0.5s ease;
+}
+
+.fieldInput {
+    display: inline-block;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    width: 20rem;
+    font-size: 1.15rem;
+    padding: 0.4rem;
+    margin: 0.4rem 0.8rem 0.9rem;
+    border: 0.02rem solid;
+}
+
+input.fieldInput[type="radio"] {
+    text-align: center;
+    width: auto;
+}
+
+.button-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+}
+
+.accessoContainer button {
+    font-family: "Raleway", "Helvetica", "arial", sans-serif;
+    margin: 0.3rem 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.08rem orange solid;
+    border-radius: 0.8rem;
+    background-color: transparent;
+}
+
+.avvertenzeForm {
+    grid-area: alert;
+    visibility: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.avvertenzeForm h3 {
+    text-align: center;
+    margin-top: 0.7rem;
+    text-decoration: underline;
+    text-decoration-color: firebrick;
+    display: none;
+}
+
+div.erroreSpecifico {
+    display: none;
+    margin-left: 1rem;
+}
+
+p.erroreCampo {
+    margin-bottom: 0.3rem;
+    border-color: firebrick;
+}
+
+div.listaErrori {
+    border: 0;
+    margin-top: 0;
+    font-size: 0.85em;
+    line-height: normal;
+    font-weight: 400;
+}
+
+p.pie {
+    border: 0;
+    padding: 0;
+    margin: 0.5rem 0 0.5rem;
+    text-align: center;
+}

@@ -1,0 +1,73 @@
+body {
+    color: black;
+    background-color: white;
+}
+
+a {
+    color: black;
+}
+
+.page_header h1 {
+    background-color: white;
+}
+
+.nav:active, .active {
+    border-bottom-color: firebrick;
+}
+
+#io a:hover {
+    color: firebrick;
+}
+
+/*FORM*/
+
+p.errato {
+    border-color: firebrick;
+}
+
+p.esatto {
+    border-color: limegreen;
+}
+
+.accessoContainer button {
+    background-color: white;
+    color: black;
+}
+
+.subBut:hover {
+    background-color: limegreen;
+    color: white;
+}
+
+.canBut:hover {
+    background-color: firebrick;
+    color: white;
+}
+
+.accessoContainer button:active {
+    color: white;
+}
+
+.fieldInput {
+    background-color: white;
+    color: black;
+}
+
+.fieldInput:focus, tr:hover {
+    background-color: #f9f9f9;
+}
+
+.avvertenzeForm h3 {
+}
+
+.avvertenzeForm h3 {
+    text-decoration-color: firebrick;
+}
+
+p.erroreCampo {
+    border-color: firebrick;
+}
+
+noscript {
+    color: firebrick;
+}

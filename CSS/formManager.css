@@ -1,0 +1,114 @@
+
+.accessoContainer {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "form alert";
+}
+
+.accessoForm {
+    grid-area: form;
+
+    margin-bottom: 0.5rem;
+}
+
+.fieldLabel {
+    transition: border 0.5s ease;
+}
+
+.fieldInput {
+    display: inline-block;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    width: 90%;
+    font-size: 1.15rem;
+    padding: 0.4rem;
+    margin: 0.4rem 5% 0.9rem;
+    border: 0.02rem solid;
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+input.fieldInput[type="radio"] {
+    text-align: center;
+    width: auto;
+}
+
+.button-flex-container {
+    /*Il display flex non l'abbiamo visto a lezione ma, vista la sua versatilità,
+    ci tenevo ad impararlo e quindi volevo la scusa per farlo*/
+    display: flex;
+    flex-direction: row;
+    /*Comando essenziale per farli flottare*/
+    flex-wrap: wrap;
+    /*shorthand = flex-flow: row wrap;*/
+    justify-content: center; /*h ->dx sx*/
+
+    align-content: space-around;/*v ->up bt*/
+    align-items: center;
+}
+
+.accessoContainer button {
+    font-family: "Raleway", "Helvetica", "arial", sans-serif;
+    margin: 0.3rem 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.08rem orange solid;
+    border-radius: 0.8rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.accessoContainer button:active {
+    background-color: orange;
+}
+
+.accessoContainer button:focus {
+    outline: none;
+}
+
+.avvertenzeForm {
+    grid-area: alert;
+    visibility: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.avvertenzeForm h3 {
+    text-align: center;
+    margin-top: 0.7rem;
+    text-decoration: underline;
+    display: none;
+}
+
+div.erroreSpecifico {
+    display: none;
+    margin-left: 1rem;
+}
+
+p.erroreCampo {
+    margin-bottom: 0.3rem;
+}
+
+div.listaErrori {
+    border: 0;
+    margin-top: 0;
+    font-size: 0.85em;
+    line-height: normal;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .accessoContainer {
+        grid-template-columns: 100%;
+        grid-template-areas: "form" "alert";
+    }
+
+    div.erroreSpecifico {
+        margin-left: 0;
+    }
+}
+
+p.pie {
+    border: 0;
+    padding: 0;
+    margin: 0.5rem 0 0.5rem;
+    text-align: center;
+}

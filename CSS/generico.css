@@ -1,0 +1,387 @@
+/*GENERALE*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-size: 1.3rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+ul {
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+li {
+    margin-left: 1em;
+}
+
+#cancelletto {
+    color: orange;
+}
+
+.mexProm {
+    text-decoration: line-through;
+}
+
+#signature {
+    position: fixed;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    right: 0.1rem;
+    bottom: 0.1rem;
+    color: orange;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33%;
+    grid-template-areas:
+            "header header header header header header header header header header header header"
+            "page_header page_header page_header page_header page_header page_header page_header page_header page_header page_header page_header page_header"
+            "nav_1 nav_2 nav_3 nav_4 nav_5 navigation . . . . . selectTema"
+            "menu menu main main main main main main main main main main"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+    font-family: "Raleway", "Helvetica", "arial", sans-serif;
+}
+
+/*HEADER*/
+
+.header {
+    grid-area: header;
+    height: 3.6rem;
+}
+
+.header div {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+#sito p {
+    font-weight: 700;
+    line-height: 3.6rem;
+    font-size: 2.5rem;
+}
+
+#user {
+    float: right;
+    line-height: 1.8rem;
+}
+
+/*NAV*/
+
+.nav {
+    border-color: orange;
+    overflow: auto;
+    border-right: 0.1rem solid;
+    border-bottom: 0 solid orange;
+    padding-bottom: 0.2rem;
+    transition: border-bottom 0.5s linear, padding-bottom 0.5s linear;
+    cursor: pointer;
+}
+
+.nav:hover, .activeNavigator {
+    border-bottom: 0.2rem solid orange;
+    padding-bottom: 0;
+}
+
+.nav:active, .active {
+    border-bottom: 0.2rem solid;
+    padding-bottom: 0;
+    font-weight: bolder;
+}
+
+.nav a ,.nav #anav {
+    display: block;
+    padding: 0.8rem 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    transition: inherit;
+}
+
+#navigation {
+    grid-area: navigation;
+    display: none;
+}
+
+#nav_1 {
+    grid-area: nav_1;
+}
+
+#nav_2 {
+    grid-area: nav_2;
+}
+
+#nav_3 {
+    grid-area: nav_3;
+}
+
+#nav_4 {
+    grid-area: nav_4;
+}
+
+#nav_5 {
+    grid-area: nav_5;
+}
+
+#selectTema {
+    grid-area: selectTema;
+    border-left: 0.1rem solid;
+    border-right: 0;
+    transition: background-color 0.5s ease, color 0.5s ease, border-bottom 0.5s ease, padding-bottom 0.5s ease;
+}
+
+/*MENU*/
+
+.menu {
+    grid-area: menu;
+    margin: 1rem 0.7rem;
+    font-size: 1.1rem;
+}
+
+.menu h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.15rem;
+}
+
+.menu p, ul {
+    margin: 0 0 0.6rem;
+}
+
+.menu a {
+    transition: color 0.5s ease;
+}
+
+/*MAIN*/
+
+.main {
+    grid-area: main;
+    margin: 1rem 0.7rem 0;
+    line-height: 1.4em;
+}
+
+.main section {
+    margin: 0 2rem 1rem;
+}
+
+.main h2 {
+    margin-bottom: 0.5rem;
+}
+
+.main p {
+    margin-top: 0.7rem;
+    font-weight: 500;
+    border-left: 0.2rem solid orange;
+    padding-left: 0.6rem;
+}
+
+.logout {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    background-color: inherit;
+    text-align: inherit;
+    text-decoration: underline;
+    outline: none;
+    border: none;
+    display: inline-block;
+}
+
+.plogout {
+    font: inherit;
+    color: inherit;
+    background-color: inherit;
+    display: inline-block;
+}
+
+.main p.plogout {
+    margin-right: 0;
+}
+
+.main table {
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.main th {
+    border-right: 0.05rem solid;
+    border-left: 0.05rem solid;
+    padding: 0.2rem 1rem;
+}
+
+#beneficiariTable td:nth-child(2) {
+    text-align: center;
+}
+
+#logTable{
+    min-width: 950px;
+}
+
+#logTable td {
+    text-align: left;
+    padding: 0.2rem 1rem;
+}
+
+#logTable td:first-child, #logTable td:nth-child(4) {
+    text-align: right;
+}
+
+#logTable td:nth-child(5) {
+    min-width: 230px;
+}
+
+.xOverfowManager {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+@media (min-width: 1000px) {
+    .main p {
+        margin-top: 0.7rem;
+        margin-right: 7rem;
+        font-weight: 500;
+        border-left: 0.2rem solid orange;
+        padding-left: 0.6rem;
+    }
+}
+
+/*FOOTER*/
+
+.footer {
+    grid-area: footer;
+    padding: 0.5rem 0;
+    border-top: 0.15rem solid;
+}
+
+.footer img {
+    margin-right: 0.5rem;
+    float: right;
+    height: 3rem;
+}
+
+#io {
+    display: inline-block;
+    position: relative;
+    left: 0.5rem;
+    height: 3rem;
+    font-size: 0.9rem;
+    min-width: 60%;
+}
+
+#io p {
+    line-height: 1.5rem;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    font-weight: bold;
+    word-spacing: -0.25em;
+}
+
+#io abbr {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+#io a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color 0.5s ease;
+}
+
+/*TABLET*/
+
+@media (max-width: 1200px) {
+    .gridContainer {
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-areas:
+                "header header header header header header header header header header"
+                "page_header page_header page_header page_header page_header page_header page_header page_header page_header page_header"
+                "nav_1 nav_2 nav_3 nav_4 nav_5 navigation . . . selectTema"
+                "menu menu main main main main main main main main"
+                "footer footer footer footer footer footer footer footer footer footer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .gridContainer {
+        grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+        grid-template-areas:
+    "header header header header header header header header"
+    "page_header page_header page_header page_header page_header page_header page_header page_header"
+    "nav_1 nav_2 nav_3 nav_4 nav_5 navigation . selectTema"
+    "menu menu main main main main main main"
+    "footer footer footer footer footer footer footer footer";
+    }
+}
+
+@media (max-width: 800px) {
+    .gridContainer {
+        grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+        grid-template-areas:
+                "header header header header header header"
+                "page_header page_header page_header page_header page_header page_header"
+                "navigation navigation navigation navigation navigation navigation"
+                "nav_1 nav_2 nav_3 nav_4 nav_5 selectTema"
+                "menu menu main main main main"
+                "footer footer footer footer footer footer";
+    }
+
+    #selectTema {
+        border-left: 0;
+    }
+}
+
+/*SMARTPHONE*/
+
+@media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: 100%;
+        grid-template-areas: "header" "page_header" "navigation" "nav_1" "nav_2" "nav_3" "nav_4" "nav_5" "selectTema" "main" "menu" "footer";
+    }
+
+    .header {
+        height: 2.6rem;
+    }
+
+    #sito p {
+        line-height: 2.6rem;
+        font-size: 1.7rem;
+    }
+
+    #user {
+        line-height: 1.3rem;
+        font-size: 0.7em;
+    }
+
+    .nav {
+        border-right: 0;
+    }
+
+    #navigation {
+        display: block;
+    }
+
+    #selectTema {
+        border-left: 0;
+    }
+
+    .main section {
+        margin: 0 0 1rem;
+    }
+}
+
+noscript {
+    visibility: visible;
+}

@@ -1,0 +1,70 @@
+body {
+    color: lightgray;
+    background-color: #404040;
+}
+
+a {
+    color: lightgray;
+}
+
+.page_header h1 {
+    background-color: #404040;
+}
+
+.nav:active, .active {
+    border-bottom-color: orangered;
+}
+
+#io a:hover {
+    color: orangered;
+}
+
+/*FORM*/
+
+p.errato {
+    border-color: orangered;
+}
+
+p.esatto {
+    border-color: forestgreen;
+}
+
+.accessoContainer button {
+    background-color: #404040;
+    color: lightgray;
+}
+
+.subBut:hover {
+    background-color: forestgreen;
+    color: lightgray;
+}
+
+.canBut:hover {
+    background-color: orangered;
+    color: lightgray;
+}
+
+.accessoContainer button:active {
+    color: lightgray;
+}
+
+.fieldInput {
+    background-color: #404040;
+    color: lightgray;
+}
+
+.fieldInput:focus, tr:hover{
+    background-color: #505050;
+}
+
+.avvertenzeForm h3 {
+    text-decoration-color: orangered;
+}
+
+p.erroreCampo {
+    border-color: orangered;
+}
+
+noscript {
+    color: palevioletred;
+}
